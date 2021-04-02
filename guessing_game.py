@@ -1,14 +1,24 @@
 """
 Python Web Development Techdegree
 Project 1 - Number Guessing Game
----------------------------------
+------------------------------------------------------------------------------
+This project implements a simple version of the number guessing game.
+
+The user is prompted to guess a random number between 1 and 10, and does so
+until they guess correctly. At the end, they see how many guesses they took
+to guess the random number.
 """
 
 import random
 
 
 def start_game():
-    """This function runs the entire game as described in the module help."""
+    """This function runs the entire game: the user is asked to guess a
+    random number between 1 and 10 repeatedly until they guess correctly,
+    with feedback being shown after each incorrect guess to narrow their
+    future guesses. Once they guess correctly, the number of total guesses
+    is displayed and the game ends.
+    """
     print("Welcome to the Number guessing game!")
 
     random_number = random.randint(1, 10)
