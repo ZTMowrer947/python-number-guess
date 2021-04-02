@@ -36,11 +36,10 @@ def start_game():
                 "Sorry, that isn't a valid guess. Your guess must be a number between 1 and 10.")
             continue
 
-        # if guess is outside range of 1-10
-        #   print "Sorry, that number is outside the valid range. Your guess must be a number between 1 and 10."
-        #   continue to next iteration
-        # proceed as below...
-        if guess == random_number:
+        if guess not in range(1, 11):
+            print("Sorry, {} is outside the valid range. Your guess must be a number between 1 and 10.".format(guess))
+            continue
+        elif guess == random_number:
             print("You got it! The number was {}!".format(random_number))
             print("It took you {} guess(es) to get it.".format(guess_counter))
             break
