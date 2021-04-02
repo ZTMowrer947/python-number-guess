@@ -21,7 +21,6 @@ def start_game():
     narrow their future guesses. Once they guess correctly, the number
     of total guesses is displayed and the game ends.
     """
-    print("Welcome to the Number guessing game!")
 
     random_number = random.randint(1, 10)
 
@@ -51,18 +50,27 @@ def start_game():
         guess_counter += 1
 
     # return number of guesses
-    print("\nThank you for playing!")
 
+
+print("Welcome to the Number guessing game!")
 
 # while true
-#   set high_score to call start_game function
-#   get should_replay from user
-#   if should_replay is equal to "yes"
-#       print "The current highscore is {high_score}"
-#       continue to next iteration
-#   else the game should stop
-#       print "Thank you for playing!"
-#       exit loop
-#   endif
+while True:
+    # set high_score to call start_game function
+    start_game()
+
+    # get should_replay from user
+    should_replay = input("\nWould you like to play again? (yes/no) ")
+    # if should_replay is equal to "yes"
+    if should_replay.lower() == "yes":
+        # print "The current highscore is {high_score}"
+        # continue to next iteration
+        pass
+    # else the game should stop
+    else:
+        # print "Thank you for playing!"
+        print("\nThank you for playing!")
+        # exit loop
+        break
+    # endif
 # endwhile
-start_game()
