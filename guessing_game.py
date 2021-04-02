@@ -11,8 +11,6 @@ guesses they took to guess the random number.
 
 import random
 
-# set high_score to 0
-
 
 def start_game():
     """This function runs the entire game: the user is asked to guess a
@@ -51,18 +49,23 @@ def start_game():
 
     # return number of guesses
 
+# set high_score to 0
+
 
 print("Welcome to the Number guessing game!")
 
 # while true
 while True:
-    # set high_score to call start_game function
+    # set game_score to call start_game function
     start_game()
 
     # get should_replay from user
     should_replay = input("\nWould you like to play again? (yes/no) ")
     # if should_replay is equal to "yes"
     if should_replay.lower() == "yes":
+        # if game_score is less than high_score
+        #   set high_score to game_score
+        # endif
         # print "The current highscore is {high_score}"
         # continue to next iteration
         pass
