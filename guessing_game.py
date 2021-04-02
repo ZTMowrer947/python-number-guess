@@ -11,6 +11,8 @@ guesses they took to guess the random number.
 
 import random
 
+# set high_score to 0
+
 
 def start_game():
     """This function runs the entire game: the user is asked to guess a
@@ -30,9 +32,14 @@ def start_game():
         try:
             guess = int(guess)
         except ValueError:
-            print("Sorry, that isn't a valid guess. Your guess must be a number.")
+            print(
+                "Sorry, that isn't a valid guess. Your guess must be a number between 1 and 10.")
             continue
 
+        # if guess is outside range of 1-10
+        #   print "Sorry, that number is outside the valid range. Your guess must be a number between 1 and 10."
+        #   continue to next iteration
+        # proceed as below...
         if guess == random_number:
             print("You got it! The number was {}!".format(random_number))
             print("It took you {} guess(es) to get it.".format(guess_counter))
@@ -44,7 +51,19 @@ def start_game():
 
         guess_counter += 1
 
+    # return number of guesses
     print("\nThank you for playing!")
 
 
+# while true
+#   set high_score to call start_game function
+#   get should_replay from user
+#   if should_replay is equal to "yes"
+#       print "The current highscore is {high_score}"
+#       continue to next iteration
+#   else the game should stop
+#       print "Thank you for playing!"
+#       exit loop
+#   endif
+# endwhile
 start_game()
