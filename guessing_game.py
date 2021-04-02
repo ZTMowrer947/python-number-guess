@@ -1,12 +1,6 @@
 """
 Python Web Development Techdegree
 Project 1 - Number Guessing Game
---------------------------------
-
-For this first project we will be using Workspaces. 
-
-NOTE: If you strongly prefer to work locally on your own computer, you can totally do that by clicking: File -> Download Workspace in the file menu after you fork the snapshot of this workspace.
-
 """
 
 import random
@@ -14,7 +8,7 @@ import random
 
 def start_game():
     """Psuedo-code Hints
-    
+
     When the program starts, we want to:
     ------------------------------------
     1. Display an intro/welcome message to the player.
@@ -22,16 +16,30 @@ def start_game():
     3. Continuously prompt the player for a guess.
       a. If the guess greater than the solution, display to the player "It's lower".
       b. If the guess is less than the solution, display to the player "It's higher".
-    
+
     4. Once the guess is correct, stop looping, inform the user they "Got it"
          and show how many attempts it took them to get the correct number.
     5. Let the player know the game is ending, or something that indicates the game is over.
-    
+
     ( You can add more features/enhancements if you'd like to. )
     """
-    # write your code inside this function.
+    # print intro message
+    # generate random number between 1 and 10
+    # set random_number to result
+    # set guess_counter to 1
+    # get guess from user
+    # while guess is not equal to random_number
+    #   increment guess_counter by 1
+    #   if guess is greater than random_number
+    #     print "{guess} is too high. Guess lower!"
+    #   else guess must be less than random_number
+    #     print "{guess} is too low. Guess higher!"
+    #   endif
+    #   get guess from user
+    # endwhile
+    # print "You got it! The number was {random_number}!"
+    # print "It took you {guess_counter} guesses to get it."
+    # print closing message
 
 
-
-# Kick off the program by calling the start_game function.
 start_game()
