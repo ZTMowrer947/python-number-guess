@@ -18,6 +18,9 @@ def play_game():
     correctly, with feedback being shown after each incorrect guess to
     narrow their future guesses. Once they guess correctly, the number
     of total guesses is displayed and the game ends.
+
+    Returns the number of guesses it took the user to guess the random
+    number.
     """
 
     random_number = random.randint(1, 10)
@@ -47,38 +50,23 @@ def play_game():
 
         guess_counter += 1
 
-    # return number of guesses
     return guess_counter
 
 
-# set high_score to 0
 high_score = 0
 
 print("Welcome to the Number guessing game!")
 
-# while true
 while True:
-    # set game_score to call play_game function
     game_score = play_game()
 
-    # get should_replay from user
     should_replay = input("\nWould you like to play again? (yes/no) ")
-    # if should_replay is equal to "yes"
     if should_replay.lower() == "yes":
-        # if game_score is less than high_score or high_score is not initialized
         if game_score < high_score or high_score == 0:
-            # set high_score to game_score
             high_score = game_score
-        # endif
 
         print("\nThe current high score is {}".format(high_score))
-        # continue to next iteration
         continue
-    # else the game should stop
     else:
-        # print "Thank you for playing!"
         print("\nThank you for playing!")
-        # exit loop
         break
-    # endif
-# endwhile
